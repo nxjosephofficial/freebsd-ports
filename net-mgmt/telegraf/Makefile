@@ -1,7 +1,6 @@
 PORTNAME=	telegraf
 DISTVERSIONPREFIX=v
-DISTVERSION=	1.28.5
-PORTREVISION=	1
+DISTVERSION=	1.30.0
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	girgen@FreeBSD.org
@@ -12,7 +11,7 @@ LICENSE=	MIT
 
 ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7
 
-USES=		go:modules
+USES=		go:1.22,modules
 
 USE_RC_SUBR=	telegraf
 

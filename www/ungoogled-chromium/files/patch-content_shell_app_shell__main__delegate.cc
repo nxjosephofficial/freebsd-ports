@@ -1,4 +1,4 @@
---- content/shell/app/shell_main_delegate.cc.orig	2023-05-05 12:12:41 UTC
+--- content/shell/app/shell_main_delegate.cc.orig	2024-03-22 14:16:19 UTC
 +++ content/shell/app/shell_main_delegate.cc
 @@ -223,7 +223,7 @@ void ShellMainDelegate::PreSandboxStartup() {
      // Reporting for sub-processes will be initialized in ZygoteForked.

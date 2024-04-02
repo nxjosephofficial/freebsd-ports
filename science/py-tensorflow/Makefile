@@ -1,7 +1,7 @@
 PORTNAME=	tensorflow
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.9.1
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	science python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DIST_SUBDIR=	${PORTNAME}
@@ -14,6 +14,7 @@ WWW=		https://www.tensorflow.org
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BROKEN=	variable has incomplete type 'StateSaver'
 ONLY_FOR_ARCHS=	amd64
 
 BUILD_DEPENDS=	${RUN_DEPENDS} \
@@ -112,7 +113,7 @@ post-patch:
 		${WRKSRC}/third_party/
 
 	@${LN} -s ${PYTHON_CMD} ${WRKDIR}/.bin/python3
-	
+
 	@cd ${WRKSRC} && \
 		${REINPLACE_CMD} "s#--batch#${BAZEL_BOOT}\', \'--batch#" \
 		configure.py
@@ -214,7 +215,7 @@ do-install:
 		${STAGEDIR}/${LOCALBASE}/libdata/pkgconfig/tensorflow_cc.pc
 
 	@${REINPLACE_CMD} "s#%%VERSION%%#${PORTVERSION}#" \
-		${STAGEDIR}/${LOCALBASE}/libdata/pkgconfig/tensorflow.pc	
+		${STAGEDIR}/${LOCALBASE}/libdata/pkgconfig/tensorflow.pc
 
 	#cleanup
 	${RM} ${STAGEDIR}/${LOCALBASE}/libdata/pkgconfig/*.bak

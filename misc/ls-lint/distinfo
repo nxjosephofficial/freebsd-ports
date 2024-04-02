@@ -1,5 +1,5 @@
-TIMESTAMP = 1693627815
-SHA256 (go/misc_ls-lint/ls-lint-v2.1.0/v2.1.0.mod) = af5ea35c83c8130947c36495a2269c70c0bcd0a9190ea87e423599f4a40b6d3d
-SIZE (go/misc_ls-lint/ls-lint-v2.1.0/v2.1.0.mod) = 154
-SHA256 (go/misc_ls-lint/ls-lint-v2.1.0/v2.1.0.zip) = 60e6b1696ebaf5df4c49dcb621c7cb68a4404b8dd31fe20f359ece0f66b17954
-SIZE (go/misc_ls-lint/ls-lint-v2.1.0/v2.1.0.zip) = 58237
+TIMESTAMP = 1710576053
+SHA256 (go/misc_ls-lint/ls-lint-v2.2.3/v2.2.3.mod) = 5ce10ffb0e5c6fd11896d4b14ab8352758dacc6370942bb524cd22e3ad71a319
+SIZE (go/misc_ls-lint/ls-lint-v2.2.3/v2.2.3.mod) = 154
+SHA256 (go/misc_ls-lint/ls-lint-v2.2.3/v2.2.3.zip) = f31c8719a7b481069549a2e2436f5f9f4cf6c5d3afe614b90beaa50865a8d2fd
+SIZE (go/misc_ls-lint/ls-lint-v2.2.3/v2.2.3.zip) = 71592

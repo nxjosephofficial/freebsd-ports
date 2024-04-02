@@ -15,7 +15,6 @@
     SUBDIR += cingb
     SUBDIR += citra
     SUBDIR += citra-qt5
-    SUBDIR += cpmemu
     SUBDIR += cpmtools
     SUBDIR += cpmtools2
     SUBDIR += darcnes
@@ -32,6 +31,7 @@
     SUBDIR += emu64
     SUBDIR += emulationstation
     SUBDIR += fceux
+    SUBDIR += flexemu
     SUBDIR += fmsx
     SUBDIR += frodo
     SUBDIR += fs-uae
@@ -42,7 +42,6 @@
     SUBDIR += gbe
     SUBDIR += gens
     SUBDIR += gngb
-    SUBDIR += gngeo
     SUBDIR += gxemul
     SUBDIR += hatari
     SUBDIR += hercules
@@ -107,6 +106,7 @@
     SUBDIR += ppsspp
     SUBDIR += ppsspp-qt5
     SUBDIR += py-gns3-converter
+    SUBDIR += py-m64py
     SUBDIR += py-unicorn
     SUBDIR += qemu
     SUBDIR += qemu-cheri
@@ -121,7 +121,6 @@
     SUBDIR += ripes
     SUBDIR += riscv-isa-sim
     SUBDIR += rpcs3
-    SUBDIR += rtc
     SUBDIR += rubygem-fission
     SUBDIR += sameboy
     SUBDIR += simh
@@ -173,7 +172,7 @@
     SUBDIR += wine-mono
     SUBDIR += wine-mono-devel
     SUBDIR += wine-proton
-    SUBDIR += wine7
+    SUBDIR += wine8
     SUBDIR += winetricks
     SUBDIR += x16-emulator
     SUBDIR += x16-rom

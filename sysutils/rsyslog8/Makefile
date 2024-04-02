@@ -1,6 +1,6 @@
 PORTNAME=	rsyslog
-PORTVERSION=	8.2310.0
-PORTREVISION=	2
+PORTVERSION=	8.2402.0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.rsyslog.com/files/download/rsyslog/
 
@@ -22,7 +22,7 @@ USES=		cpe libtool pkgconfig autoreconf python:env
 
 PORTSCOUT=	limit:^8\.
 
-OPTIONS_DEFINE=	DBI DOCS ELASTIC GCRYPT GSSAPI HTTP JSONPARSE KAFKA \
+OPTIONS_DEFINE=	DBI DOCS DTLS ELASTIC GCRYPT GSSAPI HTTP JSONPARSE KAFKA \
 		MYSQL NORMALIZE PGSQL RABBITMQ RELP SNMP
 OPTIONS_RADIO=	SSLLIB
 OPTIONS_RADIO_SSLLIB=	GNUTLS OPENSSL
@@ -33,6 +33,11 @@ DBI_DESC=		LibDBI output module for rsyslog
 DBI_LIB_DEPENDS=	libdbi.so:databases/libdbi
 DBI_CONFIGURE_ENABLE=	libdbi
 DBI_PLIST_FILES=	lib/rsyslog/omlibdbi.so
+
+DTLS_DESC=		DTLS input/output modules
+DTLS_CONFIGURE_ENABLE=	imdtls omdtls
+DTLS_PLIST_FILES=	lib/rsyslog/imdtls.so \
+			lib/rsyslog/omdtls.so
 
 ELASTIC_DESC=		Elasticsearch module for rsyslog
 ELASTIC_CONFIGURE_ENABLE=	elasticsearch
@@ -122,6 +127,7 @@ CFLAGS+=	-I${LOCALBASE}/include
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 INSTALL_TARGET=	install-strip
 
 .ifdef WITH_DEBUG

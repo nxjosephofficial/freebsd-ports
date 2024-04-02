@@ -1,6 +1,6 @@
 PORTNAME=	tools
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.16.0
+DISTVERSION=	0.19.0
 PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	devel
@@ -22,6 +22,7 @@ GO_TARGET=	./cmd/auth/cookieauth \
 		./cmd/bundle \
 		./cmd/callgraph \
 		./cmd/compilebench \
+		./cmd/deadcode \
 		./cmd/digraph \
 		./cmd/eg \
 		./cmd/file2fuzz \
@@ -41,11 +42,11 @@ GO_TARGET=	./cmd/auth/cookieauth \
 		./cmd/present2md \
 		./cmd/signature-fuzzer/fuzz-driver \
 		./cmd/signature-fuzzer/fuzz-runner \
+		./cmd/splitdwarf \
 		./cmd/ssadump \
 		./cmd/stress \
 		./cmd/stringer \
-		./cmd/toolstash \
-		./internal/cmd/deadcode
+		./cmd/toolstash
 
 CONFLICTS_INSTALL=	easygit rubygem-bundler
 
@@ -55,9 +56,6 @@ OPTIONS_DEFINE=	RARE
 RARE_DESC=	install rarely used tools
 RARE_VARS=	GO_TARGET+=" \
 		./cmd/auth/authtest \
-		./cmd/benchcmp \
-		./cmd/getgo \
-		./cmd/getgo/server \
-		./cmd/splitdwarf"
+		./cmd/benchcmp
 
 .include <bsd.port.mk>

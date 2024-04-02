@@ -1,6 +1,6 @@
 PORTNAME=	redland
 PORTVERSION=	1.0.17
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.librdf.org/source/
 
@@ -22,7 +22,9 @@ USE_LDCONFIG=	yes
 USE_PERL5=	build
 SHEBANG_FILES=	scripts/touch-mtime.pl
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-threestore=no
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
+CONFIGURE_ARGS=	--with-threestore=no \
+		--with-virtuoso=no
 
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
@@ -41,6 +43,7 @@ BDB_CONFIGURE_WITH=	bdb
 MYSQL_LIB_DEPENDS=	libunwind.so:devel/libunwind
 MYSQL_USES=		mysql ssl
 MYSQL_CONFIGURE_WITH=	mysql
+MYSQL_VARS=	IGNORE_WITH_MYSQL="105m 106m 1011m"
 
 PGSQL_USES=		pgsql
 PGSQL_CONFIGURE_WITH=	postgresql

@@ -1,5 +1,6 @@
 %%DATADIR%%/bin/BouncyCastle.Crypto.dll
 %%DATADIR%%/bin/Dapper.dll
+%%DATADIR%%/bin/Diacritical.dll
 %%DATADIR%%/bin/DryIoc.Microsoft.DependencyInjection.dll
 %%DATADIR%%/bin/DryIoc.dll
 %%DATADIR%%/bin/Dynamitey.dll
@@ -188,6 +189,8 @@
 %%DATADIR%%/bin/Microsoft.AspNetCore.WebSockets.dll
 %%DATADIR%%/bin/Microsoft.AspNetCore.WebUtilities.dll
 %%DATADIR%%/bin/Microsoft.AspNetCore.dll
+%%DATADIR%%/bin/Microsoft.Bcl.AsyncInterfaces.dll
+%%DATADIR%%/bin/Microsoft.Bcl.TimeProvider.dll
 %%DATADIR%%/bin/Microsoft.CSharp.dll
 %%DATADIR%%/bin/Microsoft.Data.SqlClient.dll
 %%DATADIR%%/bin/Microsoft.Extensions.Caching.Abstractions.dll
@@ -260,6 +263,8 @@
 %%DATADIR%%/bin/NodaTime.dll
 %%DATADIR%%/bin/Npgsql.dll
 %%DATADIR%%/bin/Polly.Contrib.WaitAndRetry.dll
+%%DATADIR%%/bin/Polly.Core.dll
+%%DATADIR%%/bin/Polly.dll
 %%DATADIR%%/bin/ReusableTasks.dll
 %%DATADIR%%/bin/Sentry.dll
 %%DATADIR%%/bin/ServiceInstall
@@ -441,13 +446,13 @@
 %%DATADIR%%/bin/System.Xml.dll
 %%DATADIR%%/bin/System.dll
 %%DATADIR%%/bin/TagLibSharp.dll
-%%DATADIR%%/bin/UI/325-90c3dc6be3e699073c29.js
-%%DATADIR%%/bin/UI/325-90c3dc6be3e699073c29.js.map
-%%DATADIR%%/bin/UI/404-db0970f9fbc48179ebe7.js
-%%DATADIR%%/bin/UI/404-db0970f9fbc48179ebe7.js.LICENSE.txt
-%%DATADIR%%/bin/UI/404-db0970f9fbc48179ebe7.js.map
-%%DATADIR%%/bin/UI/Content/325-2c9638d7b46067ed3df2.css
-%%DATADIR%%/bin/UI/Content/325-2c9638d7b46067ed3df2.css.map
+%%DATADIR%%/bin/UI/278-da671c15698cd37e2d95.js
+%%DATADIR%%/bin/UI/278-da671c15698cd37e2d95.js.map
+%%DATADIR%%/bin/UI/727-3983444a99e884b24eaf.js
+%%DATADIR%%/bin/UI/727-3983444a99e884b24eaf.js.LICENSE.txt
+%%DATADIR%%/bin/UI/727-3983444a99e884b24eaf.js.map
+%%DATADIR%%/bin/UI/Content/278-4b9ef0215185509a2cf6.css
+%%DATADIR%%/bin/UI/Content/278-4b9ef0215185509a2cf6.css.map
 %%DATADIR%%/bin/UI/Content/Fonts/Roboto-Light.ttf
 %%DATADIR%%/bin/UI/Content/Fonts/Roboto-Light.woff
 %%DATADIR%%/bin/UI/Content/Fonts/Roboto-Light.woff2
@@ -490,8 +495,8 @@
 %%DATADIR%%/bin/UI/Content/robots.txt
 %%DATADIR%%/bin/UI/Content/styles.css
 %%DATADIR%%/bin/UI/Content/styles.css.map
-%%DATADIR%%/bin/UI/index-6ad5f1fa3e60f99de0f3.js
-%%DATADIR%%/bin/UI/index-6ad5f1fa3e60f99de0f3.js.map
+%%DATADIR%%/bin/UI/index-4a4fa2603e5959238bbc.js
+%%DATADIR%%/bin/UI/index-4a4fa2603e5959238bbc.js.map
 %%DATADIR%%/bin/UI/index.html
 %%DATADIR%%/bin/UI/login.html
 %%DATADIR%%/bin/UI/oauth.html

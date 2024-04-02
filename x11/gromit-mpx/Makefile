@@ -1,5 +1,5 @@
 PORTNAME=	gromit-mpx
-DISTVERSION=	1.5.1
+DISTVERSION=	1.6.0
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org

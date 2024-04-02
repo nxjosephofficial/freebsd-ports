@@ -1,5 +1,6 @@
 PORTNAME=	bacula
-DISTVERSION=	13.0.3
+DISTVERSION=	13.0.4
+PORTREVISION=	1
 CATEGORIES?=	sysutils
 MASTER_SITES=	SF/bacula/bacula/${PORTVERSION}
 PKGNAMEPREFIX?=	#
@@ -13,7 +14,7 @@ LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES+=		cpe libtool readline shebangfix ssl
-SHEBANG_FILES=	src/cats/make_catalog_backup.pl.in scripts/baculabackupreport.in
+SHEBANG_FILES=	src/cats/make_catalog_backup.pl.in scripts/baculabackupreport
 
 CONFLICTS?=	bacula11-server bacula9-server bacula-server
 
@@ -25,6 +26,7 @@ GROUPS=		${USERS}
 PLIST_SUB+=	LIB_VERSION=${PORTVERSION}
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 USE_LDCONFIG=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include

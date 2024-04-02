@@ -1,6 +1,5 @@
 PORTNAME=	comrak
-DISTVERSION=	0.18.0
-PORTREVISION=	4
+DISTVERSION=	0.22.0
 CATEGORIES=	textproc
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -33,14 +32,19 @@ CARGO_CRATES=	adler-1.0.2 \
 		clap_derive-4.0.21 \
 		clap_lex-0.3.0 \
 		crc32fast-1.3.2 \
+		darling-0.14.4 \
+		darling_core-0.14.4 \
+		darling_macro-0.14.4 \
 		derive_arbitrary-1.3.0 \
+		derive_builder-0.12.0 \
+		derive_builder_core-0.12.0 \
+		derive_builder_macro-0.12.0 \
 		deunicode-0.4.3 \
 		dirs-4.0.0 \
 		dirs-sys-0.3.7 \
 		emojis-0.5.2 \
 		entities-1.0.1 \
-		errno-0.2.8 \
-		errno-dragonfly-0.1.2 \
+		errno-0.3.8 \
 		fancy-regex-0.7.1 \
 		fastrand-1.8.0 \
 		flate2-1.0.25 \
@@ -50,6 +54,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		hashbrown-0.12.3 \
 		heck-0.4.0 \
 		hermit-abi-0.2.6 \
+		ident_case-1.0.1 \
 		indexmap-1.9.2 \
 		instant-0.1.12 \
 		io-lifetimes-1.0.3 \
@@ -78,7 +83,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		proc-macro-crate-1.2.1 \
 		proc-macro-error-1.0.4 \
 		proc-macro-error-attr-1.0.4 \
-		proc-macro2-1.0.49 \
+		proc-macro2-1.0.64 \
 		propfuzz-0.0.1 \
 		propfuzz-macro-0.0.1 \
 		proptest-0.10.1 \
@@ -93,7 +98,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		redox_users-0.4.3 \
 		regex-1.7.0 \
 		regex-syntax-0.6.28 \
-		rustix-0.36.6 \
+		rustix-0.36.17 \
 		rusty-fork-0.3.0 \
 		ryu-1.0.12 \
 		safemem-0.3.3 \
@@ -129,15 +134,26 @@ CARGO_CRATES=	adler-1.0.2 \
 		winapi-util-0.1.5 \
 		winapi-x86_64-pc-windows-gnu-0.4.0 \
 		windows-sys-0.42.0 \
-		windows_aarch64_gnullvm-0.42.0 \
-		windows_aarch64_msvc-0.42.0 \
-		windows_i686_gnu-0.42.0 \
-		windows_i686_msvc-0.42.0 \
-		windows_x86_64_gnu-0.42.0 \
-		windows_x86_64_gnullvm-0.42.0 \
-		windows_x86_64_msvc-0.42.0 \
+		windows-sys-0.45.0 \
+		windows-sys-0.52.0 \
+		windows-targets-0.42.2 \
+		windows-targets-0.52.4 \
+		windows_aarch64_gnullvm-0.42.2 \
+		windows_aarch64_gnullvm-0.52.4 \
+		windows_aarch64_msvc-0.42.2 \
+		windows_aarch64_msvc-0.52.4 \
+		windows_i686_gnu-0.42.2 \
+		windows_i686_gnu-0.52.4 \
+		windows_i686_msvc-0.42.2 \
+		windows_i686_msvc-0.52.4 \
+		windows_x86_64_gnu-0.42.2 \
+		windows_x86_64_gnu-0.52.4 \
+		windows_x86_64_gnullvm-0.42.2 \
+		windows_x86_64_gnullvm-0.52.4 \
+		windows_x86_64_msvc-0.42.2 \
+		windows_x86_64_msvc-0.52.4 \
 		xdg-2.4.1 \
-		xml-rs-0.8.4 \
+		xml-rs-0.8.14 \
 		yaml-rust-0.4.5
 
 PLIST_FILES=	bin/${PORTNAME}

@@ -1,6 +1,6 @@
 PORTNAME=	vscode
-DISTVERSION=	1.84.2
-PORTREVISION=	4
+DISTVERSION=	1.87.2
+PORTREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/tagattie/FreeBSD-VSCode/releases/download/${DISTVERSION}/:yarn_cache
 DISTFILES=	yarn-offline-cache-${DISTVERSION}${EXTRACT_SUFX}:yarn_cache \
@@ -46,6 +46,7 @@ LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libdav1d.so:multimedia/dav1d \
 		libvpx.so:multimedia/libvpx \
 		libopenh264.so:multimedia/openh264 \
+		libpipewire-0.3.so:multimedia/pipewire \
 		libcups.so:print/cups \
 		libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz \
@@ -67,7 +68,7 @@ USES=		desktop-file-utils gl gmake gnome iconv:wchar_t jpeg \
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
 
-SOURCE_COMMIT_HASH=	2b35e1e6d88f1ce073683991d1eff5284a32690f
+SOURCE_COMMIT_HASH=	863d2581ecda6849923a2118d93a088b0745d9d6
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 
@@ -79,7 +80,7 @@ USE_GNOME=	atk cairo pango gdkpixbuf2 gtk30 libxml2 libxslt
 USE_LDCONFIG=	${DATADIR}
 
 # Keep NODE_VER in sync with www/node18 DISTVERSION
-NODE_VER=	18.18.2
+NODE_VER=	18.19.1
 NODE_VER_MAJOR=	${NODE_VER:C/\..*$//}
 
 SHEBANG_REGEX=	./(extensions|resources|scripts|src)/.*\.sh$$
@@ -102,7 +103,7 @@ OPTIONS_DEFINE=	REH
 OPTIONS_DEFAULT=# none
 REH_DESC=	Build remote extension host
 
-ELECTRON_DIR=	${.CURDIR}/../../devel/electron25
+ELECTRON_DIR=	${.CURDIR}/../../devel/electron27
 .include	"${ELECTRON_DIR}/Makefile.version"
 
 ELECTRON_DOWNLOAD_URL=	https://github.com/electron/electron/releases/download/v${ELECTRON_VER}
@@ -114,7 +115,7 @@ pre-everything::
 	@${ECHO_MSG} "opened by a jail (default 1024) is exceeded during the build of ${PORTNAME}."
 	@${ECHO_MSG} "To successfully build ${PORTNAME} with poudriere(8), you must add the following"
 	@${ECHO_MSG} "line to poudriere.conf:"
-	@${ECHO_MSG} "MAX_FILES_${PORTNAME}=4096"
+	@${ECHO_MSG} "MAX_FILES_${PORTNAME}=8192"
 	@${ECHO_MSG} ""
 
 post-extract:

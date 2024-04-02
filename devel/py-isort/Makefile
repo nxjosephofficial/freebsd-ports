@@ -1,5 +1,5 @@
 PORTNAME=	isort
-PORTVERSION=	5.12.0
+PORTVERSION=	5.13.2
 PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
@@ -22,6 +22,6 @@ NO_ARCH=	yes
 OPTIONS_DEFINE=	COLORS
 COLORS_DESC=	Color output support
 
-COLORS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}colorama>=0.4.3:devel/py-colorama@${PY_FLAVOR}
+COLORS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}colorama>=0.4.6:devel/py-colorama@${PY_FLAVOR}
 
 .include <bsd.port.mk>

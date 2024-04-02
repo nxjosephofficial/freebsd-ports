@@ -1,9 +1,7 @@
 PORTNAME=	aria2
-PORTVERSION=	1.36.0
-PORTREVISION=	4
+PORTVERSION=	1.37.0
 CATEGORIES=	www
-MASTER_SITES=	https://github.com/aria2/aria2/releases/download/release-${PORTVERSION}/ \
-		LOCAL/sunpoet
+MASTER_SITES=	https://github.com/aria2/aria2/releases/download/release-${PORTVERSION}/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Yet another download tool
@@ -13,7 +11,7 @@ WWW=		https://aria2.github.io/ \
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		compiler:c++11-lib cpe libtool pathfix pkgconfig ssl tar:xz
+USES=		compiler:c++11-lang cpe libtool pathfix pkgconfig ssl tar:xz
 
 CONFIGURE_ARGS=	--disable-epoll \
 		--enable-bittorrent \
@@ -35,6 +33,7 @@ CONFIGURE_ENV=	OPENSSL_CFLAGS=-I${OPENSSLINC} \
 		OPENSSL_LIBS="-L${OPENSSLLIB} -lcrypto -lssl" \
 		ac_cv_path_RST2HTML=no
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 INSTALL_TARGET=	install-strip
 USE_CXXSTD=	c++11
 USE_LDCONFIG=	yes

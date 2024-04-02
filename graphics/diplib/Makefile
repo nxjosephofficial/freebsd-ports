@@ -1,5 +1,5 @@
 PORTNAME=	diplib
-DISTVERSION=	3.4.0
+DISTVERSION=	3.4.2
 CATEGORIES=	graphics
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,7 +9,11 @@ WWW=		https://diplib.org/
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=		cmake:testing gl
+BROKEN_aarch64=	runaway builds, see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=276690
+
+LIB_DEPENDS=	libglfw.so:graphics/glfw
+
+USES=		cmake:testing compiler:c++14-lang gl
 USE_GL=		gl glut
 USE_LDCONFIG=	yes
 

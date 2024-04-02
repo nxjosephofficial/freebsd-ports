@@ -1,6 +1,6 @@
 PORTNAME=	onnx
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.14.1
+DISTVERSION=	1.16.0
 CATEGORIES=	misc # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,9 +11,10 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 #BUILD_DEPENDS=	bash:shells/bash
-LIB_DEPENDS=	libprotobuf.so:devel/protobuf
+LIB_DEPENDS=	libabsl_base.so:devel/abseil \
+		libprotobuf.so:devel/protobuf
 
-USES=		cmake:testing compiler:c++11-lang python:build
+USES=		cmake:testing compiler:c++17-lang python:build
 
 USE_GITHUB=	yes
 

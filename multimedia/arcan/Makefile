@@ -1,11 +1,6 @@
 PORTNAME=	arcan
-DISTVERSION=	0.6.2.1
-PORTREVISION=	4
+DISTVERSION=	0.6.3
 CATEGORIES=	multimedia
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	9b807ac75c6f.patch:-p2 # https://github.com/letoram/arcan/issues/258
-PATCHFILES+=	9020c030cbd3.patch:-p2 # evdev crashfix
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Display Server, Multimedia Framework, Game Engine
@@ -31,7 +26,9 @@ WRKSRC_SUBDIR=	src
 CMAKE_ON=	HYBRID_HEADLESS
 CMAKE_OFF=	STATIC_LIBUVC
 CMAKE_ARGS=	-DDISTR_TAG:STRING="portbld" \
-		-DENGINE_BUILDTAG:STRING="${DISTVERSIONFULL}"
+		-DENGINE_BUILDTAG:STRING="${DISTVERSIONFULL}" \
+		-DMAN_DEST=share/man/man1 \
+		-DAPIMAN_DEST=share/man/man3
 LDFLAGS+=	-Wl,--as-needed # bzip2, ffmpeg, librt, libutil, lzma, zlib
 LDFLAGS_i386=	-Wl,-z,notext
 

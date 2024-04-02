@@ -8,6 +8,10 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Gearman C Server and Library
 WWW=		http://www.gearman.org/
 
+BROKEN=		Fails to build, configure: error: cannot find boost/program_options.hpp
+DEPRECATED=	Unmaintained for years, current version released in 2013 and upstream is still active
+EXPIRATION_DATE=2024-04-30
+
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx>=0,1:textproc/py-sphinx@${PY_FLAVOR}
 LIB_DEPENDS=	libboost_program_options.so:devel/boost-libs \
 		libevent.so:devel/libevent \
@@ -55,6 +59,7 @@ MEMCACHED_CONFIGURE_ENABLE=	libmemcached
 MYSQL_USES=			mysql
 MYSQL_CONFIGURE_ON=	--with-mysql=yes
 MYSQL_CONFIGURE_OFF=	--with-mysql=no
+MYSQL_VARS=		IGNORE_WITH_MYSQL="80 81"
 PGSQL_USES=			pgsql
 PGSQL_CONFIGURE_ENABLE=	libpq
 SQLITE_USES=	sqlite

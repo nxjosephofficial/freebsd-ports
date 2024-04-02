@@ -1,5 +1,6 @@
 PORTNAME=	hare
 PORTVERSION=	g20230719
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://git.sr.ht/~sircmpwn/${PORTNAME}/archive/
 PKGNAMESUFFIX=	-lang
@@ -21,17 +22,11 @@ BUILD_DEPENDS=	harec:lang/harec \
 		scdoc:textproc/scdoc
 RUN_DEPENDS=	harec:lang/harec
 
-MAKE_ARGS=	ARCH=${ARCH:S/^amd64$/x86_64/} PREFIX=${PREFIX}
+MAKE_ARGS=	ARCH=${ARCH:S/^amd64$/x86_64/} HARECACHE=${WRKDIR}/.cache/hare PREFIX=${PREFIX}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTNAME}
 
 OPTIONS_DEFINE=	DOCS
-
-.include <bsd.port.pre.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1300000
-BROKEN=		pre-FreeBSD-13 assembler is not compatible with generated files
-.endif
 
 do-build:
 		${CP} ${WRKSRC}/config.example.mk ${WRKSRC}/config.mk
@@ -47,4 +42,4 @@ post-stage:
 do-test:
 		cd ${WRKSRC} && ${MAKE} ${MAKE_ARGS} check
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

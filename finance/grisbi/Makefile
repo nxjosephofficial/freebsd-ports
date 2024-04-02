@@ -1,7 +1,7 @@
 PORTNAME=	grisbi
-PORTVERSION=	3.0.0
+PORTVERSION=	3.0.3
 CATEGORIES=	finance
-MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20stable/${PORTVERSION:R}.x/
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20stable/${PORTVERSION:R}.x/${PORTVERSION}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Personal accounting application
@@ -21,6 +21,7 @@ USES=		desktop-file-utils gmake gnome iconv localbase	\
 
 USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 intltool libgsf libxml2
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ENV+=	OPENSSL_CFLAGS="-I${OPENSSLINC}" OPENSSL_LIBS="-L${OPENSSLLIB} -lcrypto"
 
 OPTIONS_DEFINE=	DOCS NLS

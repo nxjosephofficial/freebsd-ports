@@ -1,10 +1,9 @@
 PORTNAME=	terragrunt
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.52.3
-PORTREVISION=	1
+DISTVERSION=	0.55.20
 CATEGORIES=	sysutils
 
-MAINTAINER=	nulldutra@proton.me
+MAINTAINER=	dutra@FreeBSD.org
 COMMENT=	Terragrunt is a thin wrapper for Terraform
 WWW=		https://terragrunt.gruntwork.io/
 
@@ -13,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 RUN_DEPENDS=	terraform:sysutils/terraform
 
-USES=		go:modules
+USES=		go:1.21,modules
 
 GO_MODULE=	github.com/gruntwork-io/terragrunt
 
